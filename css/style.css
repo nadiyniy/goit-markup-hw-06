@@ -692,7 +692,7 @@ input {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
-  width: 408px;
+  min-width: 408px;
   min-height: 584px;
   margin: 80px auto;
   border-radius: 4px;
@@ -1025,6 +1025,11 @@ input {
   }
   .footer-input {
     width: 100%;
+  }
+  .modal {
+    min-width: 310px;
+    max-width: 408px;
+    width: 90%;
   }
 
 
