@@ -899,7 +899,6 @@ input {
   }
   /* header */
   .container-header {
-    p
   }
   .header-logo {
     margin-right: 0;
@@ -1032,9 +1031,120 @@ input {
     width: 90%;
   }
 
+  /* menu nav*/
+  .menu-toggle {
+    min-height: 22px;
+    min-width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+  }
+
+  .menu-toggle:hover,
+  .menu-toggle:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-toggle:hover,
+  .menu-toggle:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 80px 40px;
+    background-color: #fff;
+    z-index: 999;
+
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .menu-container.is-open {
+    transform: translateX(0);
+  }
+
+  .menu-container .menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: #fff;
+  }
+
+  .mobile-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0;
+  }
+
+  .mobile-menu .link {
+    display: block;
+    /* padding: 10px; */
+    /* color: #fff; */
+    text-decoration: none;
+  }
+
+  .header-link {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    padding: 0;
+    white-space: nowrap;
+  }
+  .address-menu {
+    display: block;
+  }
+  .list-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  .footer-list {
+    gap: 0;
+    justify-content: space-between;
+    max-width: none;
+    margin-top: 48px;
+  }
+  .menu-email {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2; /* 120% */
+    letter-spacing: 0.02em;
+  }
+  .list-item > .link {
+    padding: 0;
+  }
 
 
 
+}
 
-
+@media (min-width: 429px) {
+  .menu-toggle {
+    display: none;
+  }
+  .modal-btn {
+    display: none;
+  }
 }
