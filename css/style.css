@@ -182,10 +182,10 @@ input {
   background-size: cover;
   max-width: 1440px;
   margin: 0 auto;
+  padding: 188px 0;
 }
 .section.section-one {
   background-color: #2e2f42;
-  padding: 188px 0;
 }
 
 .section-title {
@@ -852,11 +852,10 @@ input {
 .checkbox-input:checked + .checkbox-label .checkbox-box {
   background-color: #404bbf;
   border: none;
-  fill: #F4F4FD;
+  fill: #f4f4fd;
 }
 
-
-.checkbox-icon  {
+.checkbox-icon {
 }
 .label-link {
   color: #4d5ae5;
@@ -892,4 +891,131 @@ input {
 .backdrop-input-email {
 }
 .backdrop-label-email {
+}
+
+@media (max-width: 428px) {
+  /* header */
+  .header-list {
+    display: none;
+  }
+  .address {
+    display: none;
+  }
+  .container-header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  /* main */
+  /* section one */
+
+  .section-one {
+    padding: 112px 54px;
+  }
+  .section-title {
+    font-size: 36px;
+    letter-spacing: 0.02em;
+    max-width: 320px;
+    margin-bottom: 72px;
+  }
+
+  /* section two */
+
+  .section-two {
+    padding: 96px 16px;
+  }
+  .section-two-box-icon {
+    display: none;
+  }
+  .section-two-list {
+    flex-direction: column;
+    gap: 72px;
+  }
+  .section-two-list-item {
+    width: 100%;
+  }
+  .list-subtitle {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .list-text {
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    line-height: 1.5;
+    min-width: 396px;
+    /* margin-bottom: 72px; */
+  }
+  /* section-three */
+  .section-three {
+    display: none;
+  }
+
+  /* section team */
+
+  .section-team {
+    padding: 96px 82px;
+  }
+  .section-team-list {
+    gap: 72px;
+    flex-direction: column;
+  }
+  /* section-five */
+  .section-five {
+    padding: 96px 16px;
+  }
+  .section-five-list {
+    flex-wrap: wrap;
+    gap: 72px 16px;
+  }
+  .section-five-list-item {
+    width: calc((100% - 16px) / 2);
+  }
+  /* footer */
+  .footer {
+    padding: 96px 15px;
+  }
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-section-one {
+    margin: 0;
+    margin: 0 auto;
+    margin-bottom: 72px;
+  }
+  .footer-section-two {
+    margin: 0 auto;
+    margin-bottom: 72px;
+  }
+  .footer-text {
+    max-width: 268px;
+    margin: 0 auto;
+  }
+  .footer-form {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .footer-logo {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-section-three {
+    margin: 0 auto;
+  }
+  .footer-tittle {
+    text-align: center;
+  }
+  .footer-btn {
+    width: 165px;
+    margin: 0 auto;
+  }
+
+
+
+
+
+
+
 }
