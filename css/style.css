@@ -893,7 +893,14 @@ input {
 }
 .backdrop-label-email {
 }
-
+@media (min-resolution: 192dpi) {
+  .box {
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-bg.jpg);  }
+}
 @media (max-width: 428px) {
   .container {
     padding: 0;
@@ -1222,6 +1229,8 @@ input {
   }
   .section-five-list {
     flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 552px;
   }
   .section-five-list-item {
     width: calc((100% - 48px) / 3);
