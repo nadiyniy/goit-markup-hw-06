@@ -347,7 +347,7 @@ input {
 
 .section-team {
   background: #f4f4fd;
-  padding: 120px 0;
+  padding: 120px 16px;
 }
 .team-list-item {
   background-color: #fff;
@@ -388,7 +388,7 @@ input {
   fill: currentColor;
 }
 .section-five {
-  padding: 120px 0;
+  padding: 120px 15px;
 }
 
 .section-five-list {
@@ -499,6 +499,7 @@ input {
 .footer-form {
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
 }
 .footer-form-title {
   margin-bottom: 16px;
@@ -962,7 +963,7 @@ input {
   /* section team */
 
   .section-team {
-    padding: 96px 82px;
+    padding: 96px 16px;
   }
   .section-team-list {
     gap: 72px;
@@ -970,7 +971,7 @@ input {
   }
   /* section-five */
   .section-five {
-    padding: 96px 16px;
+    padding: 96px 15px;
   }
   .section-five-list {
     flex-wrap: wrap;
@@ -1142,7 +1143,7 @@ input {
     display: none;
   }
   .modal-btn {
-    display: none;
+    /* display: none; */
   }
   .menu-container {
     display: none;
@@ -1206,7 +1207,7 @@ input {
   /* section team */
 
   .section-team {
-    padding: 96px 108px;
+    padding: 96px 16px;
   }
   .section-team-list {
     flex-wrap: wrap;
@@ -1217,7 +1218,7 @@ input {
   }
   /* section team */
   .section-five {
-    padding: 96px 108px;
+    padding: 96px 15px;
   }
   .section-five-list {
     flex-wrap: wrap;
@@ -1242,6 +1243,13 @@ input {
   .footer-section-two {
     margin: 0;
   }
+  .modal {
+    margin: 0 auto;
+    /* padding-top: 0; */
+  }
+  .modal-btn {
+    display: flex;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1158px) {
@@ -1256,5 +1264,12 @@ input {
   }
   .header-link-one {
     white-space: nowrap;
+  }
+  .modal {
+    margin: 0 auto;
+    /* padding-top: 0; */
+  }
+  .modal-btn {
+    display: flex;
   }
 }
