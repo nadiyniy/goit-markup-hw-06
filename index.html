@@ -526,6 +526,10 @@
                 name="user-name"
                 type="text"
                 class="backdrop-input"
+                required
+                minlength="3"
+                maxlength="10"
+                placeholder=" "
               />
               <svg class="input-icon" width="18" height="24">
                 <use href="./images/sprite.svg#icon-person"></use>
@@ -541,6 +545,10 @@
                 name="user-name"
                 type="text"
                 class="backdrop-input"
+                placeholder=" "
+                required
+                minlength="3"
+
               />
               <svg class="input-icon" width="18" height="24">
                 <use href="./images/sprite.svg#icon-phone"></use>
@@ -553,8 +561,11 @@
               <input
                 id="user-email"
                 name="user-name"
-                type="text"
+                type="email"
                 class="backdrop-input"
+                placeholder=" "
+                required
+
               />
               <svg class="input-icon" width="18" height="24">
                 <use href="./images/sprite.svg#icon-email"></use>
@@ -569,6 +580,8 @@
               id="user-comment"
               class="backdrop-textarea"
               placeholder="Text input"
+              minlength="3"
+              required
             ></textarea>
           </div>
           <div class="backdrop-checkbox">

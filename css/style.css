@@ -680,7 +680,9 @@ input {
 .filter-block-list-item:focus {
 }
 
-/* modal section */
+/* ////////////////
+    modal section
+    /////////////// */
 
 .backdrop {
   position: fixed;
@@ -789,6 +791,41 @@ input {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* валідне та не валідне значення в формі інпут */
+
+.backdrop-input:not(:placeholder-shown):required:valid {
+  border: 1px solid darkgreen;
+  color: darkgreen;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.backdrop-input:not(:placeholder-shown):required:invalid {
+  border: 1px solid brown;
+  color: brown;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.backdrop-input:not(:placeholder-shown):required:valid ~ .input-icon {
+  fill: darkgreen;
+}
+.backdrop-input:not(:placeholder-shown):required:invalid ~ .input-icon {
+  fill: darkred;
+}
+.backdrop-textarea:not(:placeholder-shown):required:invalid {
+  border: 1px solid brown;
+  color: brown;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.backdrop-textarea:not(:placeholder-shown):required:valid {
+  border: 1px solid darkgreen;
+  color: black;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 14px;
+
+}
+
 .backdrop-input:focus {
   border-color: #4d5ae5;
   fill: #4d5ae5;
@@ -808,7 +845,7 @@ input {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: rgba(46, 47, 66, 0.4);
+  color: black;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   background-color: transparent;
@@ -817,6 +854,7 @@ input {
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .backdrop-textarea:focus {
   border-color: #4d5ae5;
@@ -854,6 +892,10 @@ input {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
+}
+.checkbox-input:focus + .checkbox-label .checkbox-box {
+  /* outline: 1px solid #4d5ae5; */
+  border: 1px solid #4d5ae5;
 }
 
 .checkbox-icon {
@@ -900,7 +942,9 @@ input {
 
 /////////////////////////////////////////////////*/
 
-@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .section-one {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
