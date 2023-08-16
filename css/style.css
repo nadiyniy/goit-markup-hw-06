@@ -780,6 +780,17 @@ input {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: #2e2f42;
 }
+.backdrop-input:focus + .input-icon {
+  fill: #4d5ae5;
+}
+
+.backdrop-input:not(:placeholder-shown):required:valid ~ .input-icon {
+  fill: darkgreen;
+}
+.backdrop-input:not(:placeholder-shown):required:invalid ~ .input-icon {
+  fill: darkred;
+}
+
 .backdrop-input {
   width: 100%;
   height: 40px;
@@ -795,44 +806,38 @@ input {
 
 .backdrop-input:not(:placeholder-shown):required:valid {
   border: 1px solid darkgreen;
-  color: darkgreen;
+  /* color: darkgreen; */
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 .backdrop-input:not(:placeholder-shown):required:invalid {
   border: 1px solid brown;
   color: brown;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
-
-.backdrop-input:not(:placeholder-shown):required:valid ~ .input-icon {
-  fill: darkgreen;
-}
-.backdrop-input:not(:placeholder-shown):required:invalid ~ .input-icon {
-  fill: darkred;
-}
-.backdrop-textarea:not(:placeholder-shown):required:invalid {
-  border: 1px solid brown;
-  color: brown;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-}
-.backdrop-textarea:not(:placeholder-shown):required:valid {
-  border: 1px solid darkgreen;
-  color: black;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  font-size: 14px;
-
-}
-
 .backdrop-input:focus {
   border-color: #4d5ae5;
   fill: #4d5ae5;
 }
 
-.backdrop-input:focus + .input-icon {
-  fill: #4d5ae5;
+.modal-error-message {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: darkgreen;
+  font-size: 12px;
+  transform: translateY(115%);
+  letter-spacing: -0.3em;
+  opacity: 0 ;
+  transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1), letter-spacing 2s cubic-bezier(0.4, 0, 0.2, 1), color 0s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-input:not(:placeholder-shown):required:invalid ~ .modal-error-message {
+  opacity: 1;
+  letter-spacing: -0.02em;
+  transition-delay: 1s;
+  color: brown;
+
+
 }
 
 .backdrop-area {
@@ -854,7 +859,16 @@ input {
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.backdrop-textarea:not(:placeholder-shown):required:invalid {
+  border: 1px solid brown;
+  color: brown;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-textarea:not(:placeholder-shown):required:valid {
+  border: 1px solid darkgreen;
+  color: black;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .backdrop-textarea:focus {
   border-color: #4d5ae5;
@@ -894,8 +908,9 @@ input {
   fill: #f4f4fd;
 }
 .checkbox-input:focus + .checkbox-label .checkbox-box {
-  /* outline: 1px solid #4d5ae5; */
-  border: 1px solid #4d5ae5;
+  outline: 2px solid #4d5ae5;
+  outline-offset: 1px;
+  /* border: 1px solid #4d5ae5; */
 }
 
 .checkbox-icon {
@@ -924,9 +939,6 @@ input {
 .button-submit:focus,
 .button-submit:hover {
   background-color: var(--ocean, #404bbf);
-}
-
-.input-icon {
 }
 
 .backdrop-label-phone {
