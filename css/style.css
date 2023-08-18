@@ -961,6 +961,7 @@ input {
 
 /////////////////////////////////////////////////*/
 
+
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
@@ -982,6 +983,12 @@ input {
       url(../images/hero-bg@2x.jpg);
   }
 } */
+@media (max-width: 427px) {
+  .address-link.header-link { 
+  font-size: 26px;
+  }
+}
+
 @media (max-width: 428px) {
   .container {
     padding: 0;
